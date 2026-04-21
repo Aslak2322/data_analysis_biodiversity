@@ -1,0 +1,60 @@
+
+<!-- saved from url=(0169)https://mcas-presence.mcas.ms/adallom_node_local/proxy-presence-bootstrap.html?proxyWebVersion=1.67.41-1-hf&McasTsid=15600#sessionId=72c4b614-29b5-219d-1c50-c28618e5638b -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<link rel="stylesheet" type="text/css" href="./proxyweb-all.min.css"><script type="text/javascript" src="./proxy-presence-all.min.js"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1284.0" data-gr-ext-installed="">
+<script type="text/javascript">
+
+    function getQueryString( field ) {
+        var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+        var match = reg.exec(window.location.href);
+        return match ? decodeURIComponent(match[1]) : null;
+    }
+
+    var proxyWebVersion = getQueryString("proxyWebVersion");
+    var srcRootPath = "inline.cdn.mcas.ms";
+    if (!/^https?:\/\//.test(srcRootPath)) {
+        srcRootPath = "https://" + srcRootPath;
+    }
+
+    if (proxyWebVersion !== undefined && proxyWebVersion !== null && proxyWebVersion !== "") {
+        srcRootPath = srcRootPath + "/proxyweb/" + encodeURI(proxyWebVersion);
+    } else {
+        srcRootPath = srcRootPath + "/proxyweb";
+        console.warn("Could not parse proxyWebVersion from queryString, not using any version");
+    }
+
+    var cssFile = document.createElement("link");
+    cssFile.setAttribute("rel", "stylesheet");
+    cssFile.setAttribute("type", "text/css");
+    cssFile.setAttribute("href", srcRootPath + "/css/proxyweb-all.min.css");
+    document.getElementsByTagName("head")[0].appendChild(cssFile);
+
+    var jsFile = document.createElement("script");
+    jsFile.setAttribute("type", "text/javascript");
+    jsFile.setAttribute("src", srcRootPath + "/js/proxy-presence-all.min.js");
+    document.getElementsByTagName("head")[0].appendChild(jsFile);
+</script>
+
+<script type="text/javascript" src="./handlebars-intl.min.js"></script><script type="text/javascript" src="./da.js"></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
